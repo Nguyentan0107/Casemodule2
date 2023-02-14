@@ -1,13 +1,14 @@
 package model;
 
-public abstract class Material {
+public class Material {
     private String id;
     private String name;
     private String manufacturer;
-    private int quantity;
-    private int price;
+    private double quantity;
+    private double price;
     public Material(){}
-    public Material(String id, String name, String manufacturer, int quantity, int price) {
+
+    public Material(String id, String name, String manufacturer, double quantity, double price) {
         this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;
@@ -39,19 +40,30 @@ public abstract class Material {
         this.manufacturer = manufacturer;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Material{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                '}';
     }
 }
