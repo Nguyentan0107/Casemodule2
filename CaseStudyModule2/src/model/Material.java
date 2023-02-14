@@ -1,13 +1,15 @@
 package model;
 
-public class Material {
+import java.io.Serializable;
+
+public class Material implements Serializable {
     private String id;
     private String name;
     private String manufacturer;
     private double quantity;
     private double price;
-    public Material(){}
-
+    public Material(){
+    }
     public Material(String id, String name, String manufacturer, double quantity, double price) {
         this.id = id;
         this.name = name;

@@ -1,6 +1,10 @@
+package views;
+
 import controller.MaterialManager;
 import model.Material;
 import model.Screen;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +24,11 @@ public class Main {
         System.out.println("Nhập kích thước sản phẩm: ");
         double inch = scanner.nextDouble();
         Material sp = new Screen(id,name,manuf,quantity,price, (int) inch);
-        materialManager.addNewMaterial(sp);
+        try {
+            materialManager.addNewMaterial(sp);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         materialManager.showMaterial();
 
 
