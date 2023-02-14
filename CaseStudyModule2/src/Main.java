@@ -1,6 +1,6 @@
 import controller.MaterialManager;
 import model.Material;
-
+import model.Screen;
 import java.util.Scanner;
 
 public class Main {
@@ -19,7 +19,7 @@ public class Main {
         double price = scanner.nextDouble();
         System.out.println("Nhập kích thước sản phẩm: ");
         double inch = scanner.nextDouble();
-        Material sp = new Material(id,name,manuf,quantity,price);
+        Material sp = new Screen(id,name,manuf,quantity,price, (int) inch);
         materialManager.addNewMaterial(sp);
         materialManager.showMaterial();
 
