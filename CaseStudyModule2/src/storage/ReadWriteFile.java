@@ -1,13 +1,13 @@
 package storage;
 
-import model.Material;
+import model.Phone;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteFile {
-    public static boolean writeFile(List<Material> materials) throws IOException {
+    public static boolean writeFile(List<Phone> materials) throws IOException {
         File file = new File("material.dat");
         OutputStream os = new FileOutputStream(file);
         ObjectOutputStream fos = new ObjectOutputStream(os);
@@ -16,7 +16,7 @@ public class ReadWriteFile {
         os.close();
         return true;
     }
-    public static List<Material> readFile()  {
+    public static List<Phone> readFile()  {
         File file = new File("material.dat");
         InputStream inputStream = null;
         try {
@@ -33,9 +33,9 @@ public class ReadWriteFile {
         finally {
             if (objectInputStream != null) {
 
-                List<Material> list = null;
+                List<Phone> list = null;
                 try {
-                    list = (List<Material>) objectInputStream.readObject();
+                    list = (List<Phone>) objectInputStream.readObject();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 } catch (ClassNotFoundException e) {

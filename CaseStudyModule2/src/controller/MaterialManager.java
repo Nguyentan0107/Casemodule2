@@ -1,37 +1,39 @@
 package controller;
 
-import model.Material;
+import model.Phone;
 import storage.ReadWriteFile;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MaterialManager {
-    List<Material> materialList = ReadWriteFile.readFile();
+    List<Phone> materialList = ReadWriteFile.readFile();
 
     public MaterialManager() {
         this.materialList = materialList;
     }
 
-    public List<Material> getMaterialList() {
+    public List<Phone> getMaterialList() {
         return materialList;
     }
 
-    public void setMaterialList(List<Material> materialList) {
+    public void setMaterialList(List<Phone> materialList) {
         this.materialList = materialList;
     }
-    public void addNewMaterial(Material material) throws IOException {
+//    Thêm sản phẩm vào arraylist
+    public void addNewMaterial(Phone material) throws IOException {
         this.materialList.add(material);
         ReadWriteFile.writeFile(materialList);
     }
+//    Hiển thị sản phẩm.
     public void showMaterial() {
-        for (Material o: materialList) {
+        for (Phone o: materialList) {
             System.out.println(o);
         }
     }
+//    Xóa sản phẩm.
     public void deleteProductByID(String id) {
-        for (Material o : materialList) {
+        for (Phone o : materialList) {
             if (id.equals(o.getId())) {
                 materialList.remove(o);
                 break;
