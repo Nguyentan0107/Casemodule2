@@ -29,7 +29,16 @@ public class MaterialManager {
         for (Material o: materialList) {
             System.out.println(o);
         }
-                
-                
     }
+    public void deleteProductByID(String id) {
+        for (Material o : materialList) {
+            if (id.equals(o.getId())) {
+                materialList.remove(o);
+                break;
+            }else {
+                System.out.println("Không có mã sản phẩm nào trùng mã bạn vừa nhập");
+            }
+        }
+    }
+
 }
