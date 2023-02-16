@@ -32,10 +32,11 @@ public class MaterialManager {
         }
     }
 //    Xóa sản phẩm.
-    public void deleteProductByID(String id) {
+    public void deleteProductByID(String id) throws IOException {
         for (Phone o : materialList) {
             if (id.equals(o.getId())) {
                 materialList.remove(o);
+                ReadWriteFile.writeFile(materialList);
                 break;
             }else {
                 System.out.println("Không có mã sản phẩm nào trùng mã bạn vừa nhập");

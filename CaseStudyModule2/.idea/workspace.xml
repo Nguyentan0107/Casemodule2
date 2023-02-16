@@ -41,7 +41,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -63,7 +63,8 @@
       <workItem from="1676435463812" duration="3184000" />
       <workItem from="1676442581570" duration="4709000" />
       <workItem from="1676450021995" duration="6025000" />
-      <workItem from="1676510351004" duration="310000" />
+      <workItem from="1676510351004" duration="12561000" />
+      <workItem from="1676529981656" duration="3512000" />
     </task>
     <servers />
   </component>
