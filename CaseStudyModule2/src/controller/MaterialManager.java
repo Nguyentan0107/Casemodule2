@@ -4,6 +4,7 @@ import model.Phone;
 import storage.ReadWriteFile;
 
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
 
 public class MaterialManager {
@@ -43,5 +44,31 @@ public class MaterialManager {
             }
         }
     }
+    public void sortM(){
+        materialList.sort(new Comparator<Phone>() {
+            @Override
+            public int compare(Phone o1, Phone o2) {
+              return   o1.getId().compareTo(o2.getId());
+            }
+        });
+    }
+//    Sửa sản phẩm
+//    public void editProduct(String id) throws IOException {
+//        for (Phone o : materialList) {
+//            if (id.equals(o.getId())) {
+//                for (Phone i:materialList) {
+//                    i.getId() = ;
+//
+//                }
+//                ReadWriteFile.writeFile(materialList);
+//                break;
+//            }else {
+//                System.out.println("Không có mã sản phẩm nào trùng mã bạn vừa nhập");
+//            }
+//        }
+//    }
+
+
+
 
 }

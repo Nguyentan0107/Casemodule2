@@ -84,4 +84,12 @@ public class Menu {
             throw new RuntimeException(e);
         }
     }
+    public void editProductMN(){
+        System.out.println("Nhập mã sản phẩm cần sửa");
+        String id = scanner.nextLine();
+    }
+
+
+
+
 }
