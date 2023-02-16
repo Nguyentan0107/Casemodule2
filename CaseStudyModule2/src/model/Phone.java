@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public abstract class Phone implements Discount,Serializable,Comparable<Phone> {
+public abstract class Phone implements Discount,Serializable {
     private String id;
     private String name;
     private String trademark;
@@ -50,8 +50,4 @@ public abstract class Phone implements Discount,Serializable,Comparable<Phone> {
     public abstract double getAmount();
 
 
-    @Override
-    public int compareTo(Phone o) {
-        return o.getId().compareTo(getId());
-    }
 }

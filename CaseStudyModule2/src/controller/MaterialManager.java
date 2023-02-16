@@ -44,14 +44,14 @@ public class MaterialManager {
             }
         }
     }
-    public void sortM(){
-        materialList.sort(new Comparator<Phone>() {
-            @Override
-            public int compare(Phone o1, Phone o2) {
-              return   o1.getId().compareTo(o2.getId());
-            }
-        });
-    }
+//    public void sortM(){
+//        materialList.sort(new Comparator<Phone>() {
+//            @Override
+//            public int compare(Phone o1, Phone o2) {
+//              return   o1.getId().compareTo(o2.getId());
+//            }
+//        });
+//    }
 //    Sửa sản phẩm
 //    public void editProduct(String id) throws IOException {
 //        for (Phone o : materialList) {
