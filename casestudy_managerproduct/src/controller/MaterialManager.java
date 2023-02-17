@@ -53,16 +53,14 @@ public class MaterialManager {
         }
     }
 //Sửa sản phẩm.
-//    public void editProduct(String id) throws IOException {
-//        for (Samsung o : materialList) {
-//            if (id.equals(o.getId())) {
-//                materialList.get(o).setName();
-//                materialList.get(o).setTrademark();
-//                materialList.get(o.getQuantity()).setPrice();
-//                materialList.get(o.getQuantity()).();
-//        }
-//    }
-//}
+    public void editProduct(String id) throws IOException {
+        for (Samsung o : materialList) {
+            if (id.equals(o.getId())) {
+
+
+        }
+    }
+}
 
 
 

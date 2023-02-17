@@ -96,7 +96,17 @@ public class Menu {
         }
     }
 //    Sửa sản phẩm theo id.
-
+    public void addPhone () {
+    System.out.println("""
+                Chon 1 để thêm Samsung
+                Chọn 2 để thêm Iphon
+                """);
+    int a = Integer.parseInt(scanner.nextLine());
+    switch (a){
+        case 1: addSamsung(); break;
+        case 2: addIphon(); break;
+    }
+}
 
 
 
