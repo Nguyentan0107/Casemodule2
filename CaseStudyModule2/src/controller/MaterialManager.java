@@ -1,6 +1,7 @@
 package controller;
 
 import model.Phone;
+import model.Samsung;
 import storage.ReadWriteFile;
 import java.io.IOException;
 import java.util.List;
@@ -19,7 +20,7 @@ public class MaterialManager {
     public void setMaterialList(List<Phone> materialList) {
         this.materialList = materialList;
     }
-//Thêm sản phẩm vào arraylist
+//Thêm sản phẩm vào arraylist.
     public void addNewMaterial(Phone material) throws IOException {
         this.materialList.add(material);
         ReadWriteFile.writeFile(materialList);
@@ -43,7 +44,7 @@ public class MaterialManager {
         }
     }
 
-//Tim san pham
+//Tìm sản phẩm theo id.
     public void findProduct(String id) throws IOException {
         for (Phone o : materialList) {
             if (id.equals(o.getId())) {
@@ -51,7 +52,18 @@ public class MaterialManager {
             }
         }
     }
-//
+//Sửa sản phẩm.
+//    public void editProduct(String id) throws IOException {
+//        for (Samsung o : materialList) {
+//            if (id.equals(o.getId())) {
+//                materialList.get(o).setName();
+//                materialList.get(o).setTrademark();
+//                materialList.get(o.getQuantity()).setPrice();
+//                materialList.get(o.getQuantity()).();
+//        }
+//    }
+//}
+
 
 
 

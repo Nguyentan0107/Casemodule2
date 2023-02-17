@@ -27,6 +27,7 @@ public class Menu {
                          ______________________________________________________""");
 
     }
+//    Thêm sản phẩm.
     public void addPhone () {
         System.out.println("""
                 Chon 1 để thêm Samsung
@@ -74,7 +75,7 @@ public class Menu {
             throw new RuntimeException(e);
         }
     }
-    //    Xoa sản phẩm theo id
+//    Xóa sản phẩm theo id.
     public void deleteProduct () {
         System.out.println("Mời bạn nhập mã ID sản phẩm cần xóa");
         String string = scanner.nextLine();
@@ -84,8 +85,9 @@ public class Menu {
             throw new RuntimeException(e);
         }
     }
+//    Tìm kiếm sản phẩm theo id.
     public void findProductMN(){
-        System.out.println("Nhập mã sản phẩm cần sửa");
+        System.out.println("Nhập mã sản phẩm bạn tìm");
         String string = scanner.nextLine();
         try {
             materialManager.findProduct(string);
@@ -93,6 +95,9 @@ public class Menu {
             throw new RuntimeException(e);
         }
     }
+//    Sửa sản phẩm theo id.
+
+
 
 
 
