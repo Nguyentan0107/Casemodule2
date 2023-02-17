@@ -33,4 +33,5 @@ public class Samsung extends Phone{
                 "  Số lượng = " + quantity +
                 ']';
     }
+
 }

@@ -23,6 +23,7 @@ public class Iphone extends Phone{
     public double getAmount() {
         return this.quantity * getPrice();
     }
+
     @Override
     public String toString() {
         return "Samsung [" +
@@ -33,4 +34,5 @@ public class Iphone extends Phone{
                 "  Số lượng =" + quantity +
                 '}';
     }
+
 }

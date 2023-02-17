@@ -84,9 +84,14 @@ public class Menu {
             throw new RuntimeException(e);
         }
     }
-    public void editProductMN(){
+    public void findProductMN(){
         System.out.println("Nhập mã sản phẩm cần sửa");
-        String id = scanner.nextLine();
+        String string = scanner.nextLine();
+        try {
+            materialManager.findProduct(string);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

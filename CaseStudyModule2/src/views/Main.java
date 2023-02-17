@@ -19,11 +19,9 @@ public class Main {
             case 2 : menu.addPhone();break;
             case 3 : System.out.println("3"); break;
             case 4 : menu.deleteProduct();
-            case 5 : System.out.println("5");
-            case 0 : System.out.println("0");
-
+            case 5 : menu.findProductMN();
+            case 0 : System.out.println("[ Bạn đã thoát khỏi chương trình. ]"); break;
         }
-
         materialManager.showMaterial();
     }
 }

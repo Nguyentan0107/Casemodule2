@@ -49,5 +49,4 @@ public abstract class Phone implements Discount,Serializable {
     }
     public abstract double getAmount();
 
-
 }
