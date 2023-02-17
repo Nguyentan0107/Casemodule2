@@ -1,7 +1,6 @@
 package controller;
 
 import model.Phone;
-import model.Samsung;
 import storage.ReadWriteFile;
 import java.io.IOException;
 import java.util.List;
@@ -53,14 +52,17 @@ public class MaterialManager {
         }
     }
 //Sửa sản phẩm.
-    public void editProduct(String id) throws IOException {
-        for (Samsung o : materialList) {
-            if (id.equals(o.getId())) {
+    public void editProduct(String id, Phone phone) throws IOException {
+        for (int i = 0; i < materialList.size(); i++) {
+            if(id.equals(materialList.get(i).getId())){
+                materialList.set(i,phone);
 
+            }
 
         }
+        ReadWriteFile.writeFile(materialList);
     }
-}
+
 
 
 

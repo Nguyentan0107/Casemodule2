@@ -96,17 +96,52 @@ public class Menu {
         }
     }
 //    Sửa sản phẩm theo id.
-    public void addPhone () {
+    public void editPhone () throws IOException {
     System.out.println("""
-                Chon 1 để thêm Samsung
-                Chọn 2 để thêm Iphon
+                Chon 1 để sửa Samsung.
+                Chọn 2 để sửa Iphon.
                 """);
     int a = Integer.parseInt(scanner.nextLine());
     switch (a){
-        case 1: addSamsung(); break;
-        case 2: addIphon(); break;
+        case 1: editSamsung(); break;
+        case 2:
+            try {
+                editIphon();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            break;
     }
-}
+    }
+    public void editIphon () throws IOException {
+        System.out.println("Nhập mã sản phẩm cần sửa iphone : ");
+        String id = scanner.nextLine();
+        System.out.println("Nhập tên sản phẩm iphone : ");
+        String name = scanner.nextLine();
+        System.out.println("Nhập hãng sản xuất iphone :");
+        String trademark = scanner.nextLine();
+        System.out.println("Nhập giá sản phẩm iphone :");
+        double price = scanner.nextDouble();
+        System.out.println("Nhập số lượng sản phẩm iphone :");
+        int quantity = scanner.nextInt();
+        Phone i = new Iphone(id, name, trademark, price, quantity);
+        materialManager.editProduct(id,i);
+    }
+
+    public void editSamsung () throws IOException {
+        System.out.println("Nhập mã sản phẩm cần sửa iphone : ");
+        String id = scanner.nextLine();
+        System.out.println("Nhập tên sản phẩm iphone : ");
+        String name = scanner.nextLine();
+        System.out.println("Nhập hãng sản xuất iphone :");
+        String trademark = scanner.nextLine();
+        System.out.println("Nhập giá sản phẩm iphone :");
+        double price = scanner.nextDouble();
+        System.out.println("Nhập số lượng sản phẩm iphone :");
+        int quantity = scanner.nextInt();
+        Phone i = new Iphone(id, name, trademark, price, quantity);
+        materialManager.editProduct(id,i);
+    }
 
 
 
